@@ -3,6 +3,7 @@
 source todo-list-aws/bin/activate
 set -x
 
+
 RAD_ERRORS=$(radon cc src -nc | wc -l)
 
 if [[ $RAD_ERRORS -ne 0 ]]
