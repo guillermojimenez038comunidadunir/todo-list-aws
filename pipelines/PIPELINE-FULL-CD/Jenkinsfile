@@ -16,17 +16,10 @@ pipeline {
                     git branch -a
                     git checkout -b develop origin/develop
                     git checkout -b master origin/master
-		    #git checkout -b feature origin/feature	
-                    git merge develop
+		    git merge develop
                     git push origin master
 		""", label: "Merging code to master"
-                
-		#sshagent(['github']) {                   
-                #    sh "git push origin master"
-	            #sh "git push origin feature"		
-                #}
-		
-            }
+           }
         }
         stage('Production'){
             steps{
